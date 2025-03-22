@@ -1,4 +1,5 @@
 import reflex as rx
+from app.components.navbar import navbar
 from app.components.hero import hero
 from app.components.features import features
 from app.components.pricing import pricing
@@ -9,6 +10,7 @@ from app.components.footer import footer
 
 def index() -> rx.Component:
     return rx.el.div(
+        navbar(),
         hero(),
         features(),
         pricing(),

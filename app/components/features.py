@@ -2,13 +2,13 @@ import reflex as rx
 
 
 def feature_card(
-    icon: str, title: str, description: str
+    icon: str, title: str, description: str, image: str
 ) -> rx.Component:
     return rx.el.div(
         rx.el.div(
-            rx.icon(
-                icon,
-                class_name="w-12 h-12 stroke-white mb-6",
+            rx.el.img(
+                src=image,
+                class_name="w-full h-48 object-cover mb-6 border-4 border-white",
             ),
             rx.el.h3(
                 title,
@@ -18,7 +18,7 @@ def feature_card(
                 description,
                 class_name="text-white font-mono",
             ),
-            class_name="p-8 bg-black border-4 border-white",
+            class_name="p-8 bg-black border-4 border-white h-full flex flex-col",
         )
     )
 
@@ -44,21 +44,25 @@ def features() -> rx.Component:
                         "brain",
                         "Neural Networks",
                         "Build and train custom neural networks with our intuitive interface",
+                        "/modern_minimalist_vector.webp",
                     ),
                     feature_card(
                         "cpu",
                         "GPU Acceleration",
                         "Leverage powerful GPU infrastructure for faster training and inference",
+                        "/clean_vector_illustration.webp",
                     ),
                     feature_card(
                         "chart",
                         "Real-time Analytics",
                         "Monitor model performance and get insights with advanced analytics",
+                        "/modern_abstract_graph.webp",
                     ),
                     feature_card(
                         "code",
                         "API Integration",
                         "Seamlessly integrate AI capabilities into your existing applications",
+                        "/minimalist_code_bracket.webp",
                     ),
                     class_name="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8",
                 ),
@@ -66,5 +70,6 @@ def features() -> rx.Component:
             ),
             class_name="py-20",
         ),
+        id="features",
         class_name="bg-black border-b-4 border-white",
     )
