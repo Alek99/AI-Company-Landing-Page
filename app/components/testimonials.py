@@ -5,13 +5,19 @@ from app.states.landing_state import LandingState
 def testimonial_card(testimonial: dict) -> rx.Component:
     return rx.el.div(
         rx.el.div(
-            rx.el.img(
-                src=testimonial["avatar"],
-                class_name="w-16 h-16 mb-6 border-4 border-black",
+            rx.el.div(
+                rx.el.img(
+                    src=testimonial["avatar"],
+                    class_name="w-24 h-24 rounded-full object-cover border-4 border-black mx-auto",
+                ),
+                class_name="mb-6",
             ),
-            rx.el.p(
-                testimonial["quote"],
-                class_name="text-black mb-6 font-mono",
+            rx.el.div(
+                rx.el.p(
+                    testimonial["quote"],
+                    class_name="text-black font-mono flex-1",
+                ),
+                class_name="mb-6 h-32",
             ),
             rx.el.div(
                 rx.el.p(
@@ -24,7 +30,7 @@ def testimonial_card(testimonial: dict) -> rx.Component:
                 ),
                 class_name="text-center",
             ),
-            class_name="p-8 bg-yellow-400 border-4 border-black",
+            class_name="p-8 bg-yellow-400 border-4 border-black h-full flex flex-col",
         )
     )
 
@@ -53,5 +59,6 @@ def testimonials() -> rx.Component:
             ),
             class_name="py-20",
         ),
+        id="testimonials",
         class_name="bg-black border-b-4 border-white",
     )

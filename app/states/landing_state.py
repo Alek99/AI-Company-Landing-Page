@@ -39,21 +39,21 @@ class LandingState(rx.State):
             "title": "Head of AI",
             "company": "TechVision",
             "quote": "This AI platform has revolutionized our development workflow. The results are simply outstanding.",
-            "avatar": "/avatars/alex.jpg",
+            "avatar": "/professional_headshot_alex.webp",
         },
         {
             "name": "Sarah Chen",
             "title": "CTO",
             "company": "DataFlow",
             "quote": "The speed and accuracy of the AI models have given us a significant competitive advantage.",
-            "avatar": "/avatars/sarah.jpg",
+            "avatar": "/professional_headshot_sarah.webp",
         },
         {
             "name": "Marcus Rodriguez",
             "title": "ML Engineer",
             "company": "AILabs",
             "quote": "Implementation was seamless. The support team is exceptional and always ready to help.",
-            "avatar": "/avatars/marcus.jpg",
+            "avatar": "/professional_headshot_marcus.webp",
         },
     ]
     pricing_tiers: list[PricingTier] = [
