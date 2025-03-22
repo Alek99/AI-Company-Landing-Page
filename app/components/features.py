@@ -8,7 +8,7 @@ def feature_card(
         rx.el.div(
             rx.icon(
                 icon,
-                class_name="w-12 h-12 text-yellow-400 mb-6",
+                class_name="w-12 h-12 stroke-white mb-6",
             ),
             rx.el.h3(
                 title,

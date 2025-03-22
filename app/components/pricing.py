@@ -39,7 +39,7 @@ def pricing_card(tier: dict) -> rx.Component:
                             rx.el.div(
                                 rx.icon(
                                     "check",
-                                    class_name="w-5 h-5 text-black mr-2",
+                                    class_name="w-5 h-5 stroke-black mr-2",
                                 ),
                                 feature,
                                 class_name="flex items-center text-black mb-4 font-mono",
@@ -59,12 +59,12 @@ def pricing_card(tier: dict) -> rx.Component:
                         "w-full px-6 py-4 bg-white text-black font-black border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none",
                     ),
                 ),
-                class_name="p-8",
+                class_name="p-8 h-full flex flex-col justify-between",
             ),
             class_name=rx.cond(
                 tier["highlight"],
-                "relative bg-yellow-400 border-4 border-black",
-                "relative bg-white border-4 border-black",
+                "relative bg-yellow-400 border-4 border-black h-full",
+                "relative bg-white border-4 border-black h-full",
             ),
         )
     )
